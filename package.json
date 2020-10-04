@@ -1,22 +1,25 @@
 {
-  "name": "circleci-node-pratice",
-  "version": "1.0.0",
-  "description": "A pratice on how to use Circleci for CI/CD in node application.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HerityJohnny/circleci-node-pratice.git"
-  },
-  "author": "Tobi Ajibade",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/HerityJohnny/circleci-node-pratice/issues"
-  },
-  "homepage": "https://github.com/HerityJohnny/circleci-node-pratice#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+    "name": "circleci-node-pratice",
+    "version": "1.0.0",
+    "description": "A pratice on how to use Circleci for CI/CD in node application.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon app"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HerityJohnny/circleci-node-pratice.git"
+    },
+    "author": "Tobi Ajibade",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/HerityJohnny/circleci-node-pratice/issues"
+    },
+    "homepage": "https://github.com/HerityJohnny/circleci-node-pratice#readme",
+    "dependencies": {
+        "cookie-parser": "^1.4.5",
+        "express": "^4.17.1",
+        "express-session": "^1.17.1"
+    }
 }
