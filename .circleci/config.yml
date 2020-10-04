@@ -7,7 +7,7 @@ jobs:
       - image: circleci/node:10-browsers
         auth:
           username: biggaji
-          password: Adeyinka02
+          password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
       - run:
