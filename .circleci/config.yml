@@ -1,14 +1,16 @@
 version: 2.1
+
 jobs:
-	build:
-		docker: #Executor
-			image: circleci/node:10-browsers
-			auth:
-				username: biggaji
-				password: Adeyinka02
-		steps:
-			- checkout
-			- run:
-					name: Say Node version
-					command: |
-						node --version
+  build:
+    docker:
+      - image: circleci/node:10-browsers
+        auth:
+          username: biggaji
+          password: Adeyinka02
+    steps:
+      - checkout
+      - run:
+         name: Output node version
+         command: |
+           echo "Hello world"
+           node -v
