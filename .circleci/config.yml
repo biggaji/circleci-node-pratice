@@ -1,17 +1,20 @@
-
+#configure defaults values using anchor and aliases
+defaults: &default
+  docker:
+    - image: circleci/node:10-browsers
+      auth:
+        username: biggaji
+        password: $DOCKER_PASSWORD
+  
 version: 2.1
 
 jobs:
   build:
-    docker:
-      - image: circleci/node:10-browsers
-        auth:
-          username: biggaji
-          password: $DOCKERHUB_PASSWORD
-    steps:
-      - checkout
-      - run:
-         name: Output node version
-         command: |
-           echo "Hello world"
-           node -v
+    <<: *default
+  steps:
+    - checkout
+    - run:
+        name: Output node version
+        command: |
+          echo "Hello world"
+          node -v
