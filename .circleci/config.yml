@@ -1,10 +1,12 @@
 #configure defaults values using anchor and aliases
+#auth:
+        # username: biggaji
+        # password: $DOCKER_PASSWORD
+        
 default: &default
   docker:
     - image: circleci/node:10-browsers
-      auth:
-        username: biggaji
-        password: $DOCKER_PASSWORD
+      
   
 version: 2.1
 
