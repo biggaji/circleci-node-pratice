@@ -10,7 +10,7 @@ version: 2.1
 
 jobs:
   build:
-    <<: *defaults
+    <<: *default
   steps:
     - checkout
     - run:
