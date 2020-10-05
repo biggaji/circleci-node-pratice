@@ -1,5 +1,5 @@
 #configure defaults values using anchor and aliases
-defaults: &default
+default: &default
   docker:
     - image: circleci/node:10-browsers
       auth:
@@ -10,7 +10,7 @@ version: 2.1
 
 jobs:
   build:
-    <<: *default
+    <<: *defaults
   steps:
     - checkout
     - run:
