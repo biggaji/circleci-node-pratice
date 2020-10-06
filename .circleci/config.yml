@@ -3,20 +3,21 @@
         # username: biggaji
         # password: $DOCKER_PASSWORD
         
-default: &default
-  docker:
-    - image: circleci/node:10-browsers
+# default: &default
+#   docker:
+#     - image: circleci/node:10-browsers
       
   
 version: 2.1
 
 jobs:
   build:
-    <<: *default
-  steps:
-    - checkout
-    - run:
-        name: Output node version
-        command: |
-          echo "Hello world"
-          node -v
+    docker: 
+      - image: circleci/node:10-browsers
+    steps:
+      - checkout
+      - run:
+          name: Output node version
+          command: |
+            echo "Hello world"
+            node -v
