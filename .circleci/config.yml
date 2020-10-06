@@ -7,17 +7,30 @@
 #   docker:
 #     - image: circleci/node:10-browsers
       
-  
+  # Without orbs
+# version: 2.1
+
+# jobs:
+#   build:
+#     docker: 
+#       - image: circleci/node:10-browsers
+#     steps:
+#       - checkout
+#       - run:
+#           name: Output node version
+#           command: |
+#             echo "Hello world"
+#             node -v
+
+# Using Orbs
+
 version: 2.1
 
-jobs:
-  build:
-    docker: 
-      - image: circleci/node:10-browsers
-    steps:
-      - checkout
-      - run:
-          name: Output node version
-          command: |
-            echo "Hello world"
-            node -v
+orbs:
+  node: circleci/node:4.1.0
+
+workflows:
+  test:
+    jobs:
+      - node/test:
+          version: 4.1.0
