@@ -32,5 +32,4 @@ orbs:
 workflows:
   test:
     jobs:
-      - node/test:
-          version: 4.1.0
+      - node/test
